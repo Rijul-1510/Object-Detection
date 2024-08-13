@@ -1,0 +1,14 @@
+Flask==2.0.2
+Werkzeug==2.2.2
+scikit-learn
+jsonify
+scipy
+ultralytics==8.2.31
+opencv-python
+matplotlib
+numpy==1.26.4
+pandas
+seaborn
+Gunicorn
+supervision
+dill

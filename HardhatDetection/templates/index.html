@@ -1,0 +1,221 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<title>Hard Hat Detection</title> 
+	<meta charset="utf-8"> 
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+	</script> 
+	<script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+	</script> 
+	<script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+	</script>  
+<!-- 
+<script>
+let helmet = '{{helmet}}';
+if (helmet == 'False'){
+  helmet = false;
+}
+else{
+  helmet=true;
+}
+// console.log(helmet)
+let face = '{{face}}';
+if (face == 'False'){
+  face = false;
+}
+else{
+  face=true;
+}
+// console.log(face)
+console.log(Boolean(helmet) && Boolean(face))
+
+
+function onPageLoad() {
+    if (Boolean(helmet) && Boolean(face)) {
+        alert("VALID");
+    }
+    else{
+      alert("INVALID")
+    }
+}
+
+// Check if the current page is /showres and then wait for the window to load
+if (window.location.pathname === '/showres') {
+    window.onload = onPageLoad;
+}
+
+</script> -->
+<style>
+       body {
+            background-size: 2500px;
+        }
+        .containers {
+            background-color: black;
+        }
+        .App {
+            text-align: center;
+        }
+        .intro {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .navbar-brand {
+            color: black !important;
+            font-family: "calibri";
+            font-weight: bold;
+            margin: 0 auto;
+            font-size: 40px;
+        }
+        .navbar-nav {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .navbar {
+            background-color: whitesmoke;
+        }
+        .file-input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form {
+            margin: 30px;
+        }
+        .btn-secondary {
+            border: 1px;
+            border-radius: 4px;
+            margin-left: 8px;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+        .box {
+            border: 1px solid whitesmoke;
+            padding: 8px;
+            box-sizing: border-box;
+            flex: 1;
+            color: rgb(28, 26, 26);
+            background: whitesmoke;
+            margin: 3px;
+            text-align: center;
+            margin-top: 10px;
+            height: 63vh;
+            font-weight: bold !important;
+            font-family: "calibri";
+        }
+        .row-people {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            padding: 5px;
+        }
+        .col-md-4 {
+            padding: 5px;
+        }
+        .responsive {
+            width: 100%;
+            /* max-width: 100%; */
+            height: 100%;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .responsive img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain !important;
+        }
+    </style>
+  </head>
+  
+  <body >
+    <div class="App">
+      <!-- <div class="container"> -->
+        <div class="intro">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" style="text-align: center;">Hard Hat Detection</a>
+          </nav>
+          <form action="showres" method="POST" enctype="multipart/form-data">
+            <input class="file-input" type="file" name="image_name" required>
+            <button type="submit" class="btn btn-secondary" value="Upload">Submit</button>
+          </form>
+        </div>
+        {% if validation %}
+        <div class="alert alert-primary" role="alert">
+          HELMET VALIDATION - {{validation}}
+        </div>
+        {% endif %}
+        {% if hmessage %}
+        <div class="alert alert-warning" role="alert">
+          {{hmessage}}
+        </div>
+        {% endif %}
+        {% if fmessage %}
+        <div class="alert alert-warning" role="alert">
+          {{fmessage}}
+        </div>
+        {% endif %}
+
+
+    
+    <div class="row-people">
+      <div class="col-md-4 col-lg-4">
+            <div class="box">
+              <h2>Input Image</h2>
+              <div class ="responsive">
+              {% if upload_URL %}
+              <img src="{{ url_for('static', filename=upload_URL) }}" alt=""/>
+              {% endif %}
+              </div> 
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <div class="box">
+            <h2>Helmet Detection</h2>
+            <div class ="responsive">
+            {% if hat_URL %}
+            <img src="{{ url_for('static', filename=hat_URL) }}" alt=""/>
+            {% endif %}
+            </div> 
+        </div>
+      </div>
+
+
+        <div class="col-md-4 col-lg-4">
+          <div class="box">
+            <h2>Face Detection </h2>
+            <div class="responsive">
+              {% if face_URL %}
+          <img src="{{ url_for('static', filename=face_URL) }}" alt=""/>
+          {% endif %}
+            </div>
+        </div>  
+      </div>
+
+      <!-- <div class="col-md-4 col-lg-4">
+        <div class="box">
+              <h2>Validation</h2>
+                {% if helmet %}
+                <p style=" padding-left:20px; font-family:Times New Roman; text-align:left; font-weight:normal; font-size: 20px;">Helmet : {{helmet}}</p>
+                {% endif %}
+                {% if plate %}
+                <p style="padding-left:20px; font-family:Times New Roman; text-align:left; font-weight:normal; font-size: 20px;">License Plate : {{plate}}</p>
+                {% endif %}
+                {% if motor %}
+                <p style="padding-left:20px; font-family:Times New Roman; text-align:left; font-weight:normal; font-size: 20px;">Motorcyclist : {{motor}}</p>
+                {% endif %}
+
+
+        </div>
+      </div> -->
+    </div>
+  <!-- </div> -->
+</div> 
+ </body>
+</html>
