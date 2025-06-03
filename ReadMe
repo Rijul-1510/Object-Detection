@@ -1,0 +1,5 @@
+#Object-Recognition
+
+pip install -r requirements.txt 
+run app.py after installation of requirements
+
