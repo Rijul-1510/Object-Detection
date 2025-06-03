@@ -1,9 +1,8 @@
-# AI VALIDATION OF PERSONAL PROTECTIVE EQUIPMENT
+# **AI VALIDATION OF PERSONAL PROTECTIVE EQUIPMENT**
 
-AI Validation of Personal Protective Equipment (PPE) is a machine learning based system designed to enhance safety compliance at industrial and telecom sites. By leveraging the real-time capabilities of the YOLOv8 model, this solution automatically detects whether essential safety gear—such as helmets, jackets, gloves, and shoes—is worn correctly by workers. The system features an intuitive web interface built with Flask, enabling users to upload images and receive immediate visual and textual feedback. This project addresses a critical need for automating PPE compliance monitoring, aiming to reduce workplace accidents and improve operational efficiency across hazardous environments.
+AI Validation of Personal Protective Equipment (PPE) is a machine learning based system designed to enhance safety compliance at industrial and telecom sites. By leveraging the real-time capabilities [...]
 
-
-# Key Features
+# **Key Features**
 ```bash
 Real-Time Object Detection 
 Detects helmets, jackets, gloves, and shoes using YOLOv8 with high-speed inference.
@@ -20,7 +19,8 @@ Minimal dependencies; runs locally with Python and Flask—ideal for quick proto
 Modular Architecture
 Easy to extend with new object classes, logic, or deployment targets (e.g., edge devices, video streams).
 ```
-## Directory Structure 
+
+## **Directory Structure** 
 
 ```python
 Object-Detection/
@@ -36,29 +36,28 @@ Object-Detection/
 └── README.md
 ```
 
-## System Architecture
+## **System Architecture**
 
+![System Architecture](static/images/system_architecture.png)
 
-
-## Installation
+## **Installation**
 
 ```bash
 pip install -r requirements.txt
 python app.py
 ```
 
-## Usage
+## **Usage**
 1. Start the Flask server
    ```bash
    $ python app.py
    ```
-2. Navigate to`http://localhost:5000` in a browser.
+2. Navigate to `http://localhost:5000` in a browser.
 3. Upload an image and press Submit.
 4. View Input Image, Output Image with bounding boxes, and Data Retrieved in the results page.
 
+## **Result and Performance**
 
-## Result and Performance 
-
-
-
+![Sample Result](static/images/sample_result.png)
+![Performance Chart](static/images/performance_chart.png)
 
