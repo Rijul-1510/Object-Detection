@@ -41,7 +41,7 @@ Object-Detection/
 
 # System Architecture 
 
-![Screenshot 2025-06-03 111409](https://github.com/user-attachments/assets/ba72a631-a732-4424-9222-3b06a926e94b)
+![Picture2](https://github.com/user-attachments/assets/46a3d622-7ce7-4169-8d0b-7a601bc301f5)
 
 
 # Installation
