@@ -1,8 +1,9 @@
 # **AI VALIDATION OF PERSONAL PROTECTIVE EQUIPMENT**
 
-AI Validation of Personal Protective Equipment (PPE) is a machine learning based system designed to enhance safety compliance at industrial and telecom sites. By leveraging the real-time capabilities [...]
+AI Validation of Personal Protective Equipment (PPE) is a machine learning based system designed to enhance safety compliance at industrial and telecom sites. By leveraging the real-time capabilities of the YOLOv8 model, this solution automatically detects whether essential safety gear—such as helmets, jackets, gloves, and shoes—is worn correctly by workers. The system features an intuitive web interface built with Flask, enabling users to upload images and receive immediate visual and textual feedback. This project addresses a critical need for automating PPE compliance monitoring, aiming to reduce workplace accidents and improve operational efficiency across hazardous environments.
 
 # **Key Features**
+```bash
 Real-Time Object Detection 
 Detects helmets, jackets, gloves, and shoes using YOLOv8 with high-speed inference.
 
@@ -17,7 +18,7 @@ Minimal dependencies; runs locally with Python and Flask—ideal for quick proto
 
 Modular Architecture
 Easy to extend with new object classes, logic, or deployment targets (e.g., edge devices, video streams).
-
+```
 ## **Directory Structure** 
 
 ```python
@@ -33,9 +34,10 @@ Object-Detection/
 │   └── results.html       # Results dashboard
 └── README.md
 
-## **System Architecture**
+# **System Architecture**
 
-![System Architecture](static/images/system_architecture.png)
+![Screenshot 2025-06-03 111409](https://github.com/user-attachments/assets/ba72a631-a732-4424-9222-3b06a926e94b)
+
 
 ## **Installation**
 
@@ -54,7 +56,7 @@ python app.py
 4. View Input Image, Output Image with bounding boxes, and Data Retrieved in the results page.
 
 ## **Result and Performance**
-
-![Sample Result](static/images/sample_result.png)
-![Performance Chart](static/images/performance_chart.png)
+![Screenshot 2024-11-21 114407](https://github.com/user-attachments/assets/de538e10-c242-41a6-aa65-327491f03503)
+![Picture1](https://github.com/user-attachments/assets/6992ae85-49fc-4f23-a239-5a5edf6ffa1b)
+![Screenshot 2024-11-21 111304](https://github.com/user-attachments/assets/46cd8413-8345-47f9-b570-dc3947ac84af)
 
