@@ -1,8 +1,8 @@
-# AI VALIDATION OF PERSONAL PROTECTIVE EQUIPMENT
+# **AI VALIDATION OF PERSONAL PROTECTIVE EQUIPMENT**
 
 AI Validation of Personal Protective Equipment (PPE) is a machine learning based system designed to enhance safety compliance at industrial and telecom sites. By leveraging the real-time capabilities [...]
 
-# Key Features
+# **Key Features**
 Real-Time Object Detection 
 Detects helmets, jackets, gloves, and shoes using YOLOv8 with high-speed inference.
 
@@ -17,7 +17,6 @@ Minimal dependencies; runs locally with Python and Flask—ideal for quick proto
 
 Modular Architecture
 Easy to extend with new object classes, logic, or deployment targets (e.g., edge devices, video streams).
-```
 
 ## **Directory Structure** 
 
@@ -33,7 +32,6 @@ Object-Detection/
 │   ├── index.html         # Upload page
 │   └── results.html       # Results dashboard
 └── README.md
-```
 
 ## **System Architecture**
 
