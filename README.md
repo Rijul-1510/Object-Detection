@@ -60,7 +60,27 @@ python app.py
 4. View Input Image, Output Image with bounding boxes, and Data Retrieved in the results page.
 
 ## **Result and Performance**
+# Object Detection Results
+The model, built on YOLOv8, demonstrates high accuracy in detecting key personal protective equipment (PPE) items across diverse environments. The inference results clearly identify:
+Helmets
+Jackets
+Shoes
+
+Each detection is tagged with a confidence score, with many predictions exceeding 0.9, indicating strong model confidence. The model performs robustly in varied conditions including different backgrounds, lighting, angles, and poses. Both face-visible and face-occluded scenarios are handled accurately.
+
 ![Screenshot 2024-11-21 114407](https://github.com/user-attachments/assets/de538e10-c242-41a6-aa65-327491f03503)
-![Picture1](https://github.com/user-attachments/assets/6992ae85-49fc-4f23-a239-5a5edf6ffa1b)
+
+# Performance Metrics
+The Precision–Confidence Curve illustrates the precision of the model across different confidence thresholds.
+Mean precision for all classes peaks at 1.00 at a confidence of 0.884, showing the model is well-calibrated.
+
 ![Screenshot 2024-11-21 111304](https://github.com/user-attachments/assets/46cd8413-8345-47f9-b570-dc3947ac84af)
 
+# Overall Precision:
+
+Excellent performance with precision ≥ 0.9 across most classes.
+Model confidently separates true positives from false positives, making it reliable for real-time compliance validation.
+
+# Final Dashboard
+
+![Picture1](https://github.com/user-attachments/assets/6992ae85-49fc-4f23-a239-5a5edf6ffa1b)
