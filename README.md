@@ -1,6 +1,7 @@
 # **AI VALIDATION OF PERSONAL PROTECTIVE EQUIPMENT**
-
+```bash
 AI Validation of Personal Protective Equipment (PPE) is a machine learning based system designed to enhance safety compliance at industrial and telecom sites. By leveraging the real-time capabilities of the YOLOv8 model, this solution automatically detects whether essential safety gear—such as helmets, jackets, gloves, and shoes—is worn correctly by workers. The system features an intuitive web interface built with Flask, enabling users to upload images and receive immediate visual and textual feedback. This project addresses a critical need for automating PPE compliance monitoring, aiming to reduce workplace accidents and improve operational efficiency across hazardous environments.
+```
 
 # **Key Features**
 ```bash
